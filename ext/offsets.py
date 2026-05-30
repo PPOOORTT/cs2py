@@ -57,9 +57,9 @@ class Client:
 
 	def _load_from_url(self):
 		try:
-			self.offsets = self._get_json_from_url('https://raw.githubusercontent.com/a2x/cs2-dumper/main/output/offsets.json')
-			self.clientdll = self._get_json_from_url('https://raw.githubusercontent.com/a2x/cs2-dumper/main/output/client_dll.json')
-			self.buttons = self._get_json_from_url('https://raw.githubusercontent.com/a2x/cs2-dumper/main/output/buttons.json')
+			self.offsets = self._get_json_from_url('https://raw.githubusercontent.com/PPOOORTT/cs2-dumper/main/output/offsets.json')
+			self.clientdll = self._get_json_from_url('https://raw.githubusercontent.com/PPOOORTT/cs2-dumper/main/output/client_dll.json')
+			self.buttons = self._get_json_from_url('https://raw.githubusercontent.com/PPOOORTT/cs2-dumper/main/output/buttons.json')
 		except Exception as e:
 			print(f'Unable to get offsets: {e}')
 			exit()
