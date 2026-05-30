@@ -7,7 +7,7 @@ from pathlib import Path
 def get_remote_version():
     """Get version from GitHub"""
     try:
-        url = "https://raw.githubusercontent.com/GsDeluxe/cs2py/refs/heads/main/version.txt"
+        url = "https://raw.githubusercontent.com/GsDeluxe/PPOOORTT/refs/heads/main/version.txt"
         response = requests.get(url, timeout=10)
         response.raise_for_status()
         return response.text.strip()
@@ -41,7 +41,7 @@ def calculate_file_hash(file_path):
 def get_remote_file_list():
     """Get file list from GitHub"""
     try:
-        api_url = "https://api.github.com/repos/GsDeluxe/cs2py/git/trees/main?recursive=1"
+        api_url = "https://api.github.com/repos/GsDeluxe/PPOOORTT/git/trees/main?recursive=1"
         response = requests.get(api_url, timeout=10)
         response.raise_for_status()
 
@@ -52,7 +52,7 @@ def get_remote_file_list():
             if item['type'] == 'blob':
                 files.append({
                     'path': item['path'],
-                    'url': f"https://raw.githubusercontent.com/GsDeluxe/cs2py/refs/heads/main/{item['path']}"
+                    'url': f"https://raw.githubusercontent.com/GsDeluxe/PPOOORTT/refs/heads/main/{item['path']}"
                 })
 
         return files
