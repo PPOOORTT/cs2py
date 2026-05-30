@@ -9,7 +9,6 @@ from features import esp
 from features import bombtimer
 from features import fovchanger
 from features import bhop
-from features import discodrpc
 
 from GUI import gui_mainloop
 from GUI import gui_util
@@ -127,9 +126,6 @@ if __name__ == "__main__":
 	Bomb_proc.daemon = True
 	Bomb_proc.start()
 
-	discord_rpc_proc = multiprocessing.Process(target=discodrpc.DiscordRpcThread, args=(SharedOptions, ))
-	discord_rpc_proc.daemon = True
-	discord_rpc_proc.start()
 
 	while esp.pme.overlay_loop():
 		esp.ESP_Update(ProcessObject, ClientModuleAddress, SharedOptions, SharedOffsets, SharedBombState)
